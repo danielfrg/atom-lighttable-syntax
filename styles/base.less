@@ -1,0 +1,161 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
+  padding-left: 1px;
+}
+
+.comment {
+  color: @ltdarkblue;
+
+}
+
+.punctuation.whitespace.comment {
+  color: black;
+}
+
+.keyword {
+  color: @ltgreen;
+
+  &.operator {
+    color: @syntax-text-color;
+  }
+}
+
+.storage {
+  color: @ltblue;
+
+  &.storage.type.function {
+    color: @ltgreen;
+
+    &.python {
+      color: @ltgreen;
+    }
+  }
+}
+
+.constant {
+  color: @ltblue;
+
+  &.other.placeholder.python {
+    color: @ltlightblue;
+  }
+}
+.variable {
+  color: @syntax-text-color;
+
+  &.language.python {
+    color: @ltblue;
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @ltlightblue;
+}
+
+.punctuation {
+  color: @syntax-text-color;
+
+  &.definition.comment {
+    color: @ltdarkblue;
+  }
+
+  &.definition.string {
+    color: @ltlightblue;
+  }
+}
+
+.support {
+  color: @ltgreen;
+}
+
+.entity {
+  color: @ltblue;
+
+  &.name.function.decorator.python {
+    color: @ltgreen;
+  }
+}
+
+.meta {
+  color: @ltblue;
+
+  &.function-call {
+    color: @syntax-text-color;
+  }
+
+  &.item-access {
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
