@@ -135,6 +135,22 @@ atom-text-editor[mini] .scroll-view,
       color: @ltdarkgray;
     }
   }
+
+  &.unquoted.yaml {
+    color: @syntax-text-color;
+  }
+  &.quoted.double.yaml {
+    color: @syntax-text-color;
+    .punctuation.definition.string {
+      color: @syntax-text-color;
+    }
+  }
+  &.quoted.single.yaml {
+    color: @syntax-text-color;
+    .punctuation.definition.string {
+      color: @syntax-text-color;
+    }
+  }
 }
 
 .punctuation {
@@ -151,7 +167,7 @@ atom-text-editor[mini] .scroll-view,
   &.definition.entity.css{
     color: @ltgreen;
   }
-  &.punctuation.definition.keyword.css{
+  &.definition.keyword.css{
     color: @ltgreen;
   }
 }
