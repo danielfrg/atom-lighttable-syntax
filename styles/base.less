@@ -82,9 +82,15 @@ atom-text-editor[mini] .scroll-view,
 .storage {
   color: @ltblue;
 
-  &.storage.type.function {
+  &.type.function {
     color: @ltgreen;
 
+    &.python {
+      color: @ltgreen;
+    }
+  }
+
+  &.type.class {
     &.python {
       color: @ltgreen;
     }
@@ -93,6 +99,10 @@ atom-text-editor[mini] .scroll-view,
 
 .constant {
   color: @ltblue;
+
+  &.language.python{
+    color: @ltgreen;
+  }
 
   &.other.placeholder.python {
     color: @ltlightblue;
