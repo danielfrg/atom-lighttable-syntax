@@ -69,11 +69,6 @@ atom-text-editor[mini] .scroll-view,
 
 .comment {
   color: @ltdarkblue;
-
-}
-
-.punctuation.whitespace.comment {
-  color: black;
 }
 
 .keyword {
@@ -102,22 +97,34 @@ atom-text-editor[mini] .scroll-view,
   &.other.placeholder.python {
     color: @ltlightblue;
   }
+
+  &.other.rgb-value.css {
+    color: @ltpurple;
+  }
 }
+
 .variable {
   color: @syntax-text-color;
 
   &.language.python {
     color: @ltblue;
   }
-}
 
-.invalid.illegal {
-  background-color: @red;
-  color: @syntax-background-color;
+  &.other.less {
+    color: @ltblue;
+  }
 }
 
 .string {
   color: @ltlightblue;
+
+  &.quoted.double.json {
+    color: @ltdarkgray;
+
+    .punctuation.definition.string {
+      color: @ltdarkgray;
+    }
+  }
 }
 
 .punctuation {
@@ -130,16 +137,31 @@ atom-text-editor[mini] .scroll-view,
   &.definition.string {
     color: @ltlightblue;
   }
+
+  &.definition.entity.css{
+    color: @ltgreen;
+  }
+  &.punctuation.definition.keyword.css{
+    color: @ltgreen;
+  }
 }
 
 .support {
   color: @ltgreen;
+
+  &.type.property-name.css {
+    color: @ltdarkgray;
+  }
 }
 
 .entity {
   color: @ltblue;
 
   &.name.function.decorator.python {
+    color: @ltgreen;
+  }
+
+  &.other.attribute-name.class.css {
     color: @ltgreen;
   }
 }
@@ -154,6 +176,20 @@ atom-text-editor[mini] .scroll-view,
   &.item-access {
     color: @syntax-text-color;
   }
+
+  &.structure.dictionary.value.json {
+    .string.quoted.double.json {
+      color: @ltgreen;
+    }
+    .punctuation.definition.string {
+      color: @ltgreen;
+    }
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
 }
 
 .none {
