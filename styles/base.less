@@ -67,6 +67,12 @@ atom-text-editor[mini] .scroll-view,
   padding-left: 1px;
 }
 
+.source {
+  &.css.less{
+    color: @ltgreen;
+  }
+}
+
 .comment {
   color: @ltdarkblue;
 }
@@ -110,6 +116,10 @@ atom-text-editor[mini] .scroll-view,
 
   &.other.rgb-value.css {
     color: @ltpurple;
+  }
+
+  &.numeric.css {
+    color: @ltgreen;
   }
 }
 
@@ -197,6 +207,10 @@ atom-text-editor[mini] .scroll-view,
   &.other.attribute-name.class.css {
     color: @ltgreen;
   }
+
+  &.other.attribute-name.attribute.css {
+    color: @ltgreen;
+  }
 }
 
 .meta {
@@ -217,6 +231,42 @@ atom-text-editor[mini] .scroll-view,
     .punctuation.definition.string {
       color: @ltgreen;
     }
+  }
+
+  &.brace.curly.less{
+    color: @syntax-text-color;
+  }
+
+  &.brace.round.less {
+    color: @ltgreen;
+  }
+}
+
+// Markdown
+.markup.heading {
+  color: @ltgreen;
+  font-weight: bold;
+}
+
+.markup.raw {
+  color: @ltdarkblue;
+
+  .support {
+    color: inherit;
+  }
+}
+
+.markup.code {
+  .support {
+    color: @ltdarkblue;
+  }
+}
+
+.link {
+  color: @ltblue;
+
+  .punctuation.definition{
+    color: inherit;
   }
 }
 
